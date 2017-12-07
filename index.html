@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NODA | Nation Office Darts Association</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- css -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="css/styles.css" rel="stylesheet" />
+	<!-- javascript -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container d-flex align-items-center justify-content-center h-100">
+		<div class="row">
+			<div class="player col d-flex flex-column align-items-center">
+				<div class="player-label align-self-start">
+					<img class="avatar" src="./images/icy.png" alt="Icy Avatar" />
+					<span>Icy</span>
+				</div><!-- end label -->
+				<div class="score">
+					<h1 id="icy-score" class="display-1">0</h1>
+				</div><!-- end score -->
+				<div class="d-flex flex-column justify-content-around score-input-group">
+					<div class="score-input">
+						<input type="number" data-player="icy" data-shot="1" class="form-control shot-input" placeholder="Shot 1" aria-label="icy-1" min="1" max="50">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary active" data-player="icy" data-shot="1" data-mod="1">
+								<input type="radio" name="options" id="1-single" autocomplete="off">X1
+							</label>
+							<label class="btn btn-primary" data-player="icy" data-shot="1" data-mod="2">
+								<input type="radio" name="options" id="1-double" autocomplete="off">X2
+							</label>
+							<label class="btn btn-primary" data-player="icy" data-shot="1" data-mod="3">
+								<input type="radio" name="options" id="1-triple" autocomplete="off">X3
+							</label>
+						</div>
+					</div><!-- end score input -->
+					<div class="score-input">
+						<div>
+							<input type="number" data-player="icy" data-shot="2" class="form-control shot-input" placeholder="Shot 2" aria-label="icy-2" min="1" max="50">
+						</div>
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary active" data-player="icy" data-shot="2" data-mod="1">
+								<input type="radio" name="options" id="2-single" autocomplete="off">X1
+							</label>
+							<label class="btn btn-primary" data-player="icy" data-shot="2" data-mod="2">
+								<input type="radio" name="options" id="2-double" autocomplete="off">X2
+							</label>
+							<label class="btn btn-primary" data-player="icy" data-shot="2" data-mod="3">
+								<input type="radio" name="options" id="2-triple" autocomplete="off">X3
+							</label>
+						</div>
+					</div><!-- end score input -->
+					<div class="score-input">
+						<input type="number" data-player="icy" data-shot="3" class="form-control shot-input" placeholder="Shot 3" aria-label="icy-3" min="1" max="50">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary active" data-player="icy" data-shot="3" data-mod="1">
+								<input type="radio" name="options" id="3-single" autocomplete="off">X1
+							</label>
+							<label class="btn btn-primary" data-player="icy" data-shot="3" data-mod="2">
+								<input type="radio" name="options" id="3-double" autocomplete="off">X2
+							</label>
+							<label class="btn btn-primary" data-player="icy" data-shot="3" data-mod="3">
+								<input type="radio" name="options" id="3-triple" autocomplete="off">X3
+							</label>
+						</div>
+					</div>
+				</div><!-- end score group -->
+			</div><!-- end player -->
+			<div class="player col d-flex flex-column align-items-center">
+				<div class="player-label align-self-start">
+					<img class="avatar" src="./images/spicy.png" alt="spicy Avatar" />
+					<span>Spicy</span>
+				</div><!-- end label -->
+				<div class="score">
+					<h1 id="spicy-score" class="display-1">0</h1>
+				</div><!-- end score -->
+				<div class="d-flex flex-column justify-content-around score-input-group">
+					<div class="score-input">
+						<input type="number" data-player="spicy" data-shot="1" class="form-control shot-input" placeholder="Shot 1" aria-label="spicy-1" min="1" max="50">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-danger active" data-player="spicy" data-shot="1" data-mod="1">
+								<input type="radio" name="options" id="1-single" autocomplete="off">X1
+							</label>
+							<label class="btn btn-danger" data-player="spicy" data-shot="1" data-mod="2">
+								<input type="radio" name="options" id="1-double" autocomplete="off">X2
+							</label>
+							<label class="btn btn-danger" data-player="spicy" data-shot="1" data-mod="3">
+								<input type="radio" name="options" id="1-triple" autocomplete="off">X3
+							</label>
+						</div>
+					</div><!-- end score input -->
+					<div class="score-input">
+						<div>
+							<input type="number" data-player="spicy" data-shot="2" class="form-control shot-input" placeholder="Shot 2" aria-label="spicy-2" min="1" max="50">
+						</div>
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-danger active" data-player="spicy" data-shot="2" data-mod="1">
+								<input type="radio" name="options" id="2-single" autocomplete="off">X1
+							</label>
+							<label class="btn btn-danger" data-player="spicy" data-shot="2" data-mod="2">
+								<input type="radio" name="options" id="2-double" autocomplete="off">X2
+							</label>
+							<label class="btn btn-danger" data-player="spicy" data-shot="2" data-mod="3">
+								<input type="radio" name="options" id="2-triple" autocomplete="off">X3
+							</label>
+						</div>
+					</div><!-- end score input -->
+					<div class="score-input">
+						<input type="number" data-player="spicy" data-shot="3" class="form-control shot-input" placeholder="Shot 3" aria-label="spicy-3" min="1" max="50">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-danger active" data-player="spicy" data-shot="3" data-mod="1">
+								<input type="radio" name="options" id="3-single" autocomplete="off">X1
+							</label>
+							<label class="btn btn-danger" data-player="spicy" data-shot="3" data-mod="2">
+								<input type="radio" name="options" id="3-double" autocomplete="off">X2
+							</label>
+							<label class="btn btn-danger" data-player="spicy" data-shot="3" data-mod="3">
+								<input type="radio" name="options" id="3-triple" autocomplete="off">X3
+							</label>
+						</div>
+					</div>
+				</div><!-- end score group -->
+			</div><!-- end player -->
+		</div>
+	</div>
+
+	<script>
+		var scores = {
+			'icy': [0, 0, 0],
+			'spicy': [0, 0, 0]
+		};
+
+		var mods = {
+			'icy': [1, 1, 1],
+			'spicy': [1, 1, 1]
+		};
+
+		$('input.shot-input').keyup(function(e) {
+			var input	= $(e.target);
+			var player	= input.data('player');
+			var score	= parseInt(e.target.value) || 0;
+			var shot 	= parseInt(input.data('shot'));
+
+			updateScores(player, shot, score);
+		});
+
+		$('label.btn').click(function(e) {
+			var mod_label	= $(e.target);
+			var player		= mod_label.data('player');
+			var shot		= parseInt(mod_label.data('shot'));
+			var mod			= parseInt(mod_label.data('mod'));
+
+			updateMods(player, shot, mod);
+		});
+
+		function updateScores(player, shot, score) {
+			this.scores[player][shot - 1] = score;
+			updateScoreDisplay(player);
+		}
+
+		function updateMods(player, shot, mod) {
+			this.mods[player][shot - 1] = mod;
+			updateScoreDisplay(player);
+		}
+
+		function updateScoreDisplay(player) {
+			var total_scores = 0;
+			for(var i = 0; i < 3; i++) {
+				total_scores += this.scores[player][i] * this.mods[player][i];
+			}
+			$('#' + player + '-score').html(total_scores);
+		}
+	</script>
+</body>
+</html>
