@@ -27,7 +27,7 @@
 				</div><!-- end score -->
 				<div class="d-flex flex-column justify-content-around score-input-group">
 					<div class="score-input">
-						<input type="number" data-player="icy" data-shot="1" class="form-control shot-input" placeholder="Shot 1" aria-label="icy-1" min="1" max="50">
+						<input data-player="icy" data-shot="1" class="form-control shot-input" placeholder="Shot 1" aria-label="icy-1" min="1" max="50">
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-primary active" data-player="icy" data-shot="1" data-mod="1">
 								<input type="radio" name="options" id="1-single" autocomplete="off">X1
@@ -42,7 +42,7 @@
 					</div><!-- end score input -->
 					<div class="score-input">
 						<div>
-							<input type="number" data-player="icy" data-shot="2" class="form-control shot-input" placeholder="Shot 2" aria-label="icy-2" min="1" max="50">
+							<input data-player="icy" data-shot="2" class="form-control shot-input" placeholder="Shot 2" aria-label="icy-2" min="1" max="50">
 						</div>
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-primary active" data-player="icy" data-shot="2" data-mod="1">
@@ -57,7 +57,7 @@
 						</div>
 					</div><!-- end score input -->
 					<div class="score-input">
-						<input type="number" data-player="icy" data-shot="3" class="form-control shot-input" placeholder="Shot 3" aria-label="icy-3" min="1" max="50">
+						<input data-player="icy" data-shot="3" class="form-control shot-input" placeholder="Shot 3" aria-label="icy-3" min="1" max="50">
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-primary active" data-player="icy" data-shot="3" data-mod="1">
 								<input type="radio" name="options" id="3-single" autocomplete="off">X1
@@ -82,7 +82,7 @@
 				</div><!-- end score -->
 				<div class="d-flex flex-column justify-content-around score-input-group">
 					<div class="score-input">
-						<input type="number" data-player="spicy" data-shot="1" class="form-control shot-input" placeholder="Shot 1" aria-label="spicy-1" min="1" max="50">
+						<input data-player="spicy" data-shot="1" class="form-control shot-input" placeholder="Shot 1" aria-label="spicy-1" min="1" max="50">
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-danger active" data-player="spicy" data-shot="1" data-mod="1">
 								<input type="radio" name="options" id="1-single" autocomplete="off">X1
@@ -97,7 +97,7 @@
 					</div><!-- end score input -->
 					<div class="score-input">
 						<div>
-							<input type="number" data-player="spicy" data-shot="2" class="form-control shot-input" placeholder="Shot 2" aria-label="spicy-2" min="1" max="50">
+							<input data-player="spicy" data-shot="2" class="form-control shot-input" placeholder="Shot 2" aria-label="spicy-2" min="1" max="50">
 						</div>
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-danger active" data-player="spicy" data-shot="2" data-mod="1">
@@ -112,7 +112,7 @@
 						</div>
 					</div><!-- end score input -->
 					<div class="score-input">
-						<input type="number" data-player="spicy" data-shot="3" class="form-control shot-input" placeholder="Shot 3" aria-label="spicy-3" min="1" max="50">
+						<input data-player="spicy" data-shot="3" class="form-control shot-input" placeholder="Shot 3" aria-label="spicy-3" min="1" max="50">
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-danger active" data-player="spicy" data-shot="3" data-mod="1">
 								<input type="radio" name="options" id="3-single" autocomplete="off">X1
@@ -130,52 +130,6 @@
 		</div>
 	</div>
 
-	<script>
-		var scores = {
-			'icy': [0, 0, 0],
-			'spicy': [0, 0, 0]
-		};
-
-		var mods = {
-			'icy': [1, 1, 1],
-			'spicy': [1, 1, 1]
-		};
-
-		$('input.shot-input').keyup(function(e) {
-			var input	= $(e.target);
-			var player	= input.data('player');
-			var score	= parseInt(e.target.value) || 0;
-			var shot 	= parseInt(input.data('shot'));
-
-			updateScores(player, shot, score);
-		});
-
-		$('label.btn').click(function(e) {
-			var mod_label	= $(e.target);
-			var player		= mod_label.data('player');
-			var shot		= parseInt(mod_label.data('shot'));
-			var mod			= parseInt(mod_label.data('mod'));
-
-			updateMods(player, shot, mod);
-		});
-
-		function updateScores(player, shot, score) {
-			this.scores[player][shot - 1] = score;
-			updateScoreDisplay(player);
-		}
-
-		function updateMods(player, shot, mod) {
-			this.mods[player][shot - 1] = mod;
-			updateScoreDisplay(player);
-		}
-
-		function updateScoreDisplay(player) {
-			var total_scores = 0;
-			for(var i = 0; i < 3; i++) {
-				total_scores += this.scores[player][i] * this.mods[player][i];
-			}
-			$('#' + player + '-score').html(total_scores);
-		}
-	</script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
